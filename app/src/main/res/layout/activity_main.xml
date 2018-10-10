@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/numview"
+        app:layout_constraintRight_toRightOf="@id/numview"
+        app:layout_constraintTop_toTopOf="@id/numview"
+        app:layout_constraintBottom_toBottomOf="@id/numview"
+        android:background="@color/numbackground"
+        />
+
+    <TextView
+        android:id="@+id/numview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textSize="52sp"
+        app:fontFamily="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="123456789"
+        android:textColor="@android:color/black"
+        />
+
+
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_eq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/one"
+                android:textSize="40sp"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/two"
+                android:textSize="40sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <Button
+                android:id="@+id/btn3"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/three"
+                android:textSize="40sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btn2"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <Button
+                android:id="@+id/btn_plus"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperation"
+                android:text="@string/plus"
+                android:textSize="40sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btn2"
+                tools:layout_editor_absoluteX="8dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/four"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="201dp"
+                />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/five"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="243dp"
+                tools:layout_editor_absoluteY="201dp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/six"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="201dp" />
+
+            <Button
+                android:id="@+id/btn_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperation"
+                android:text="@string/minus"
+                android:textSize="40sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/seven"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="154dp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/eight"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="154dp" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/nine"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="154dp" />
+
+            <Button
+                android:id="@+id/btn_mul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperation"
+                android:text="@string/mul"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="154dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClear"
+                android:text="@string/C"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitPress"
+                android:text="@string/zero"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="154dp" />
+
+            <Button
+                android:id="@+id/btn_dot2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDot"
+                android:text="@string/dot"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn_div"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperation"
+                android:text="@string/div"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="154dp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_eq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="onResult"
+        android:text="@string/equals"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout2"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout2" />
+
+</android.support.constraint.ConstraintLayout>
